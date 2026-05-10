@@ -1,23 +1,29 @@
-.neo-repeat-generate-button {
+.neo-repeat-generate-button { /* Not Active & Not Busy: orange */
     min-width: 9.5em;
+    font-size: 0.9em;
+    background: var(--button-primary-background-fill) !important;
+    color: var(--button-primary-text-color) !important;
+    border-color: var(--button-primary-border-color) !important;
+    border-radius: 8px;
+    flex: 1;
 }
 
-.neo-repeat-generate-button.neo-repeat-generate-active {
-    background: var(--button-primary-background-fill);
-    color: var(--button-primary-text-color);
-    border-color: var(--button-primary-border-color);
+.neo-repeat-generate-button.neo-repeat-generate-active { /* Active: green */
+    background: #80ff80 !important;
+    color: var(--button-secondary-text-color) !important;
 }
 
-.neo-repeat-generate-button.neo-repeat-generate-busy {
-    filter: grayscale(1);
+.neo-repeat-generate-button.neo-repeat-generate-wait { /* Not Active & Busy: yellow */
+    background: #ffff80 !important;
+    color: var(--button-secondary-text-color) !important;
 }
 
 .neo-repeat-generate-interrupt-button {
-    min-width: 6.5em;
-    margin-left: 0.35em;
-    padding-left: 0.65em;
-    padding-right: 0.65em;
+    min-width: 9.5em;
     font-size: 0.9em;
+    background: #ffa4a4 !important;
+    border-radius: 8px;
+    flex: 1;
 }
 
 .neo-repeat-generate-interrupt-button:disabled {
@@ -28,6 +34,13 @@
 
 .neo-repeat-generate-interrupt-button.neo-repeat-generate-interrupt-enabled {
     filter: none;
+}
+
+.neo-repeat-generate-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
 }
 
 .neo-repeat-generate-status {

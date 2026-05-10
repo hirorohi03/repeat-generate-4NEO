@@ -164,9 +164,15 @@
             return;
         }
 
-        state.button.textContent = state.running ? "Stop Queue Repeat" : "Start Queue Repeat";
+        if (state.running) {
+            state.button.textContent = "■ Stop Repeat";
+            state.button.classList.toggle("neo-repeat-generate-wait", false);
+        } else {
+            state.button.textContent = state.busy ? "⌛ Stopping" : "↻ Start Repeat";
+            state.button.classList.toggle("neo-repeat-generate-wait", state.busy);
+        }
+
         state.button.classList.toggle("neo-repeat-generate-active", state.running);
-        state.button.classList.toggle("neo-repeat-generate-busy", state.busy);
 
         if (state.interruptButton) {
             state.interruptButton.disabled = !state.busy;
@@ -516,8 +522,12 @@
         updateButton(tabName);
         setStatus(tabName, "Idle");
 
-        toolRow.appendChild(button);
-        toolRow.appendChild(interruptButton);
+        const buttons = document.createElement("div");
+        buttons.className = "neo-repeat-generate-buttons";
+
+        buttons.appendChild(button);
+        buttons.appendChild(interruptButton);
+        toolRow.appendChild(buttons);
         toolRow.appendChild(status);
 
         log(tabName, "ui mounted");
