@@ -437,7 +437,7 @@
         const state = states[tabName];
         state.running = false;
         updateButton(tabName);
-        setStatus(tabName, state.busy ? "Stopping after current task..." : "Stopped");
+        setStatus(tabName, "Stopping after current task...");
         log(tabName, "repeat stop requested", {
             busy: state.busy,
             taskId: state.lastTaskId,
@@ -448,7 +448,7 @@
         const state = states[tabName];
         state.running = false;
         updateButton(tabName);
-        setStatus(tabName, state.busy ? "Interrupting..." : "Interrupt sent");
+        setStatus(tabName, "Interrupting...");
         log(tabName, "repeat interrupt requested", {
             busy: state.busy,
             taskId: state.lastTaskId,
@@ -520,7 +520,7 @@
         state.status = status;
 
         updateButton(tabName);
-        setStatus(tabName, "Idle");
+        setStatus(tabName, "Stopped");
 
         const buttons = document.createElement("div");
         buttons.className = "neo-repeat-generate-buttons";
