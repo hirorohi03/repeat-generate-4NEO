@@ -1,4 +1,18 @@
+<p align="center">
+🌍
+<strong>English</strong> |
+<a href="./README_JP.md">日本語</a> |
+</p>
+
+---
+
+<div align="center">
+
 # Repeat Generate for NEO
+
+---
+
+</div>
 
 Repeat image generation automatically in [Stable Diffusion WebUI Forge - Neo](https://github.com/Haoming02/sd-webui-forge-classic). (It can potentially work with other webUIs, but I am not promising to maintain them for anything other than Forge Neo)
 
@@ -12,7 +26,7 @@ This is a lightweight Forge extension that continuously requeues image generatio
 
 It tracks generation completion using Forge/Gradio queue APIs and automatically starts the next generation when the current task finishes.
 
-## Features
+## 💕 Features
 
 * Automatic repeated generation
 
@@ -26,7 +40,7 @@ It tracks generation completion using Forge/Gradio queue APIs and automatically 
 
 * “Interrupt” button to stop immediately
 
-## UI
+## 🖥️ UI
 
 * ↻ Start Repeat / ■ Stop Repeat / ⌛ Stopping: Transitions between the following three states.
 
@@ -43,7 +57,7 @@ It tracks generation completion using Forge/Gradio queue APIs and automatically 
 
 * Status: Shows current state.
 
-## Known Limitations
+## ⚠️ Known Limitations
 
 Continue generating using the same parameters as at the start.
 
@@ -53,14 +67,14 @@ Continue generating using the same parameters as at the start.
 
 * You don't need to wait until “↻ Start Repeat”, click while “⌛ Stopping”.
 
-## Installation
+## 🛠️ Installation
 
 1. Open your Stable Diffusion WebUI Forge - Neo.
 2. Navigate to the Extensions tab → Install from URL.
 3. Paste: <https://github.com/hirorohi03/repeat-generate-4NEO.git>
 4. Click Install and restart the WebUI.
 
-## How It Works
+## 🚗 How It Works
 
 The extension:
 
@@ -74,7 +88,7 @@ The extension:
 
 This avoids timer polling and works with Forge's native queue system.
 
-## Internal States
+## 🔍 Internal States
 
 The extension internally separates:
 
@@ -91,10 +105,10 @@ This allows correct behavior such as:
 
 * proper UI status display
 
-## License
+## ⚖️ License
 
 This repository is based on a fork of an upstream repository that did not specify a license.
 
-The developer of the upstream repository has stated on [note.com](https://note.com/akirau338/n/n3fbfeaa6184d?scrollpos=comment) that he does not design no specific license has been and that anyone is free to use.
+The developer **Mr. akirau-ai** ([@akirau-ai](https://github.com/akirau-ai)) of the upstream repository has stated on [note.com](https://note.com/akirau338/n/n3fbfeaa6184d?scrollpos=comment) that he does not design no specific license has been and that anyone is free to use.
 
 My original modifications in this repository are released under the MIT License.
