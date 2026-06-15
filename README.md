@@ -61,10 +61,10 @@ It tracks generation completion using Forge/Gradio queue APIs and automatically 
 
 Continue generating using the same parameters as at the start.
 
+* Even if ControlNet is enabled, it will be ignored. There may be other settings that are also ignored.
+* When image generation is complete, the first image will be temporarily displayed in the preview.
 * Changing parameters during repeated generation is not being accepted.
-
 * If you want to change the parameters, stop repeated generation and then start.
-
 * You don't need to wait until “↻ Start Repeat”, click while “⌛ Stopping”.
 
 ## 🛠️ Installation
